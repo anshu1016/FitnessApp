@@ -107,7 +107,7 @@ export const addGoal = (token, goalBody) => async (dispatch) => {
     dispatch({ type: "ADD_GOAL_SUCCESS", payload: data.addedGoal });
 
     // Fetch the latest goals after successfully adding a new goal
-    dispatch(Get_Goal());
+    dispatch(Get_Goal(token));
   } catch (error) {
     console.error("Error adding goal:", error);
     dispatch({ type: "ADD_GOAL_FAILURE", payload: error.message });
@@ -145,6 +145,7 @@ export const deleteGoal = (token, goalID) => async (dispatch) => {
     }
 
     dispatch({ type: "DELETE_GOAL_SUCCESS", payload: goalID });
+    dispatch(Get_Goal(token));
   } catch (error) {
     console.error("Error deleting goal:", error);
     dispatch({ type: "DELETE_GOAL_FAILURE", payload: error.message });
@@ -217,6 +218,7 @@ export const deleteExercise = (token, exerciseId) => async (dispatch) => {
     const data = await response.json();
 
     dispatch({ type: "DELETE_EXERCISE_SUCCESS", payload: exerciseId });
+    
   } catch (error) {
     console.error("Error deleting exercise:", error);
     dispatch({ type: "DELETE_EXERCISE_FAILURE", payload: error.message });
