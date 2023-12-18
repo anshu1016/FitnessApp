@@ -1,9 +1,10 @@
+const MAIN_API = "https://fitness-api-lxj6.onrender.com";
 export const loginUser = (email, password) => async (dispatch) => {
   dispatch({ type: "LOGIN_START" });
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/users/login", // I assumed the URL for login based on your signup URL. Please correct if it's different.
+      "https://fitness-api-lxj6.onrender.com/api/users/login", // I assumed the URL for login based on your signup URL. Please correct if it's different.
       {
         method: "POST",
         headers: {
@@ -43,7 +44,7 @@ export const Get_Goal = (token) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/goals",
+      "https://fitness-api-lxj6.onrender.com/api/goals",
       {
         method: "POST",
         headers: {
@@ -83,7 +84,7 @@ export const addGoal = (token, goalBody) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/addGoal",
+      "https://fitness-api-lxj6.onrender.com/api/addGoal",
       {
         method: "POST",
         headers: {
@@ -123,7 +124,7 @@ export const deleteGoal = (token, goalID) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/deleteGoal",
+      "https://fitness-api-lxj6.onrender.com/api/deleteGoal",
       {
         method: "DELETE",
         headers: {
@@ -159,7 +160,7 @@ export const fetchExercises = (token) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/user/exercises",
+      "https://fitness-api-lxj6.onrender.com/api/user/exercises",
       {
         method: "POST",
         headers: {
@@ -193,7 +194,7 @@ export const deleteExercise = (token, exerciseId) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/deleteExercise",
+      "https://fitness-api-lxj6.onrender.com/api/deleteExercise",
       {
         method: "DELETE",
         headers: {
@@ -231,7 +232,7 @@ export const addExercise = (exercise, token) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/addExercise",
+      "https://fitness-api-lxj6.onrender.com/addExercise",
       {
         method: "POST",
         headers: {
@@ -267,7 +268,7 @@ export const fetchFood = (token) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/food",
+      "https://fitness-api-lxj6.onrender.com/api/food",
       {
         method: "POST",
         headers: {
@@ -303,7 +304,7 @@ export const deleteFood = (foodId, token) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/deleteFood",
+      "https://fitness-api-lxj6.onrender.com/api/deleteFood",
       {
         method: "DELETE",
         headers: {
@@ -339,7 +340,7 @@ export const addFood = (foodItem, token) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://fitnessapi2.arunshukla.repl.co/api/addFood",
+      "https://fitness-api-lxj6.onrender.com/api/addFood",
       {
         method: "POST",
         headers: {
